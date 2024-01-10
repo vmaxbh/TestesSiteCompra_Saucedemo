@@ -14,13 +14,13 @@
   "scripts": {
     "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
     "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
-    "test": "cypress run",
+    "test": "cypress run --record --key YOUR_RECORD_KEY",
     "cy:open": "cypress open",
-    "test:cloud": "cypress run --record --tag desktop",
-    "cy:compra": "cypress run --spec cypress/e2e/compra.cy.js",
-    "cy:crud": "cypress run --spec cypress/e2e/crud.cy.js",
-    "cy:login": "cypress run --spec cypress/e2e/login.cy.js",
-    "cy:logout": "cypress run --spec cypress/e2e/logout.cy.js"
+    "test:cloud": "cypress run --record --key YOUR_RECORD_KEY --tag desktop",
+    "cy:compra": "cypress run --spec cypress/e2e/compra.cy.js --record --key YOUR_RECORD_KEY",
+    "cy:crud": "cypress run --spec cypress/e2e/crud.cy.js --record --key YOUR_RECORD_KEY",
+    "cy:login": "cypress run --spec cypress/e2e/login.cy.js --record --key YOUR_RECORD_KEY",
+    "cy:logout": "cypress run --spec cypress/e2e/logout.cy.js --record --key YOUR_RECORD_KEY"
   },
   "author": "Maxwell Viana QA",
   "license": "ISC"
