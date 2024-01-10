@@ -1,7 +1,9 @@
 {
   "description": "exercício01_e2e",
   "devDependencies": {
-    "cypress": "^13.6.2"
+    "cypress": "^13.6.2",
+    "eslint": "^8.56.0",
+    "eslint-plugin-cypress": "^2.15.1"
   },
   "dependencies": {
     "faker": "^5.5.3"
@@ -10,9 +12,11 @@
   "version": "1.0.0",
   "main": "cypress.config.js",
   "scripts": {
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
     "test": "cypress run",
     "cy:open": "cypress open",
-    "test:cloud":"cypress run --record --tag desktop"
+    "test:cloud": "cypress run --record --tag desktop"
   },
   "author": "Maxwell Viana QA",
   "license": "ISC"
